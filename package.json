@@ -1,0 +1,19 @@
+{
+  "name": "devnews",
+  "version": "1.0.0",
+  "description": "Site de notícias",
+  "main": "app.js",
+  "scripts": {
+    "test": "teste"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenriqueValente09/Not-cias-Dev.git"
+  },
+  "author": "Pedro Valente",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HenriqueValente09/Not-cias-Dev/issues"
+  },
+  "homepage": "https://github.com/HenriqueValente09/Not-cias-Dev#readme"
+}
