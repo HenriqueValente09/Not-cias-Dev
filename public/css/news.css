@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Quicksand:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Quicksand;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.news-header {
+  position: relative;
+  height: 120px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.news-nav .container {
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.logo {
+  position: absolute;
+  left: 50px;
+  font-size: 40px;
+}
+
+.news-nav {
+  position: relative;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.news-nav ul {
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.news-nav li {
+  display: inline-block;
+  padding: 7px;
+  font-weight: bold;
+  color: white;
+}
+
+.news-nav li a {
+  text-decoration: none;
+  font-size: 25px;
+  color: grey;
+}
+
+.news-nav li a:hover {
+  color: rgb(0, 155, 0);
+}
+
+.news-form {
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  border: 4px solid rgb(0, 155, 0);
+  border-radius: 25px;
+}
+
+.news-busca {
+  padding: 10px 10px;
+  border-radius: 25px 0 0 25px;
+  width: 100px;
+  transition: 0.5s cubic-bezier(0.5, -0.3, 1, 0.5);
+  background-color: black;
+}
+
+.news-busca:focus {
+  width: 300px;
+}
+
+.news-busca-btn {
+  background-color: black;
+  width: 50px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+}

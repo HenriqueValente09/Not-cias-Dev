@@ -8,12 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HenriqueValente09/Not-cias-Dev.git"
+    "url": "git+https://github.com/HenriqueValente09/devNews.git"
   },
   "author": "Pedro Valente",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HenriqueValente09/Not-cias-Dev/issues"
+    "url": "https://github.com/HenriqueValente09/devNews/issues"
   },
-  "homepage": "https://github.com/HenriqueValente09/Not-cias-Dev#readme"
+  "homepage": "https://github.com/HenriqueValente09/devNews#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
 }
