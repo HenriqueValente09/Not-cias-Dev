@@ -17,7 +17,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: rgb(165, 165, 165)
+  background-color: rgb(71, 71, 83)
 }
 
 .news-header {
@@ -25,7 +25,7 @@ body {
   z-index: 2;
   height: 80px;
   width: 100%;
-  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0);
   color: white;
 }
 
@@ -70,7 +70,8 @@ body {
 .news-nav li a {
   text-decoration: none;
   font-size: 25px;
-  color: grey;
+  color: rgb(201, 201, 201);
+  font-weight: bold;
 }
 
 .news-nav li a:hover {
@@ -136,6 +137,7 @@ section {
   position: relative;
   max-width: 760px;
   min-width: 300px;
+  background-color: white;
   margin: 50px 20px;
   height: 350px;
   overflow: hidden;
@@ -151,7 +153,7 @@ section {
 }
 
 .news-table .news:hover {
-  background-color: rgba(0, 255, 0, 0.4);
+  background-color: rgb(0, 255, 0);
 }
 
 .news-table .news h2 {
@@ -163,6 +165,7 @@ section {
   transform: translateY(150px);
   opacity: 0;
   transition: .3s cubic-bezier(1, 0, 0, 1);
+  font-size: 20px;
 }
 
 .news-table .news:hover p{
