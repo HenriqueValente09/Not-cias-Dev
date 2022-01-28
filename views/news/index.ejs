@@ -8,19 +8,30 @@
     <div class="news-table">
       <div class="news-table-content">
         <% if (news.length > 0) { %>
+        <% const resultBusca_ = resultBusca %>
+        <% if (resultBusca_ !== null) { %>
         <% for (let news_ of news) { %>
         <div class="news">
-          <h2><%= news_.title %> </h2>
+          <h2><%= news_.title %></h2>
           <div class="news-img">
-            <img src="<%= news_.imageUrl %> " alt="<%= news_.title %> ">
+            <img src="<%= news_.imageUrl %>" alt="<%= news_.title %>">
           </div>
           <p><%= news_.desc %> </p>
         </div>
         <% } %>
+        <% } else if (resultBusca_ == null) { %>
+        <% for (let news_ of news) { %>
+        <div class="news">
+          <h2><%= news_.title %></h2>
+          <div class="news-img">
+            <img src="<%= news_.imageUrl %>" alt="<%= news_.title %>">
+          </div>
+          <p><%= news_.desc %> </p>
+        </div>
+        <% } %>
+        <% } %>
+        <% } %> 
       </div>
-      <% } else { %>
-      <h1>No Products Found!</h1>
-      <% } %>
     </div>
     </div>
   </section>

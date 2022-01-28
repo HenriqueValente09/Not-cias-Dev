@@ -6,4 +6,6 @@ const router = express.Router();
 
 router.get('/', newsController.getIndex);
 
+router.post('/news-busca', newsController.postNewsBusca);
+
 module.exports = router;
