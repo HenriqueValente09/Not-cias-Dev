@@ -1,0 +1,22 @@
+<%- include('../includes/head.ejs')  %>
+<link rel="stylesheet" href="/css/cadastro.css">
+</head>
+
+<body>
+  <%- include('../includes/navigation.ejs') %>
+  <section>
+    <div class="container">
+      <div class="bloco-cadastro">
+        <form action="/admin/addNews" class="form-cadastro <%= errorAlert %> " method="post">
+          <label for="">Título</label>
+          <input type="text" name="title" id="title">
+          <label for="">Imagem</label>
+          <input type="url" name="imageUrl" id="imageUrl">
+          <label for="">Texto</label>
+          <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+          <button class="btn-cadastro">Cadastrar notícia</button>
+        </form>
+      </div>
+    </div>
+  </section> 
+</body>

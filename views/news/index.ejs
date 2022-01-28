@@ -1,4 +1,4 @@
-<%- include('../includes/header.ejs') %>
+<%- include('../includes/head.ejs') %>
 </head>
 
 <body>
@@ -7,37 +7,22 @@
   <section>
     <div class="news-table">
       <div class="news-table-content">
+        <% if (news.length > 0) { %>
+        <% for (let news_ of news) { %>
         <div class="news">
-          <h2>Título</h2>
+          <h2><%= news_.title %> </h2>
           <div class="news-img">
-            <img src="https://s2.glbimg.com/O85RaNTTbIiXlvcLA4eqmivABMM=/e.glbimg.com/og/ed/f/original/2019/10/28/aurora-borealis-woods-forest-northern-lights-trees-2647474.jpg" alt="">
+            <img src="<%= news_.imageUrl %> " alt="<%= news_.title %> ">
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia delectus sed aperiam nulla eos sit velit laudantium ratione maxime autem reprehenderit explicabo itaque eveniet magni, amet nostrum? Ex, quos.</p>
+          <p><%= news_.desc %> </p>
         </div>
-        <div class="news">
-          <h2>Título</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia delectus sed aperiam nulla eos sit velit laudantium ratione maxime autem reprehenderit explicabo itaque eveniet magni, amet nostrum? Ex, quos.</p>
-        </div>
-        <div class="news">
-          <h2>Título</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia delectus sed aperiam nulla eos sit velit laudantium ratione maxime autem reprehenderit explicabo itaque eveniet magni, amet nostrum? Ex, quos.</p>
-        </div>
-        <div class="news">
-          <h2>Título</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia delectus sed aperiam nulla eos sit velit laudantium ratione maxime autem reprehenderit explicabo itaque eveniet magni, amet nostrum? Ex, quos.</p>
-        </div>
-        <div class="news">
-          <h2>Título</h2>
-          <div class="news-img">
-            <img src="https://s2.glbimg.com/O85RaNTTbIiXlvcLA4eqmivABMM=/e.glbimg.com/og/ed/f/original/2019/10/28/aurora-borealis-woods-forest-northern-lights-trees-2647474.jpg" alt="">
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia delectus sed aperiam nulla eos sit velit laudantium ratione maxime autem reprehenderit explicabo itaque eveniet magni, amet nostrum? Ex, quos.</p>
-        </div>
-        <div class="news">
-          <h2>Título</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia delectus sed aperiam nulla eos sit velit laudantium ratione maxime autem reprehenderit explicabo itaque eveniet magni, amet nostrum? Ex, quos.</p>
-        </div>
+        <% } %>
       </div>
+      <% } else { %>
+      <h1>No Products Found!</h1>
+      <% } %>
+    </div>
     </div>
   </section>
+  <script src="/js/news.js"></script>
 </body>
