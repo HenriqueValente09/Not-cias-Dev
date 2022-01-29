@@ -16,7 +16,7 @@
           <div class="news-img">
             <img src="<%= news_.imageUrl %>" alt="<%= news_.title %>">
           </div>
-          <p><%= news_.desc %> </p>
+          <p><%= news_.desc %></p>
         </div>
         <% } %>
         <% } else if (resultBusca_ == null) { %>
@@ -26,7 +26,8 @@
           <div class="news-img">
             <img src="<%= news_.imageUrl %>" alt="<%= news_.title %>">
           </div>
-          <p><%= news_.desc %> </p>
+          <p><%= news_.desc %></p>
+          <a class="btn-news" href="#">ler mais</a>
         </div>
         <% } %>
         <% } %>

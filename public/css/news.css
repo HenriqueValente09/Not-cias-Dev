@@ -151,7 +151,7 @@ section {
   margin: 50px 20px;
   height: 350px;
   overflow: hidden;
-  cursor: pointer;
+  cursor: default;
   color: black;
   transition: .2s linear;
   font-family: Quicksand;
@@ -196,4 +196,27 @@ section {
   width: 0px;
   height: 0px;
   opacity: 0;
+}
+
+.btn-news {
+  width: 80%;
+  height: 65px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  transform: translateY(65px);
+  background-color: rgb(0, 175, 0);
+  left: 10%;
+  border-radius: 7px 7px 0 0;
+  cursor: pointer;
+  transition: .2s ;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 15px;
+}
+
+.news-table .news:hover .btn-news {
+  transform: translateY(0px);
 }
