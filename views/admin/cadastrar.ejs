@@ -9,11 +9,11 @@
       <div class="bloco-cadastro">
         <form action="/admin/addNews" class="form-cadastro" method="post">
           <label for="">Título</label>
-          <input type="text" name="title" id="title">
+          <input type="text" name="title" id="title" required>
           <label for="">Imagem</label>
           <input type="url" name="imageUrl" id="imageUrl">
           <label for="">Texto</label>
-          <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+          <textarea name="desc" id="desc" cols="30" rows="10" required></textarea>
           <button class="btn-cadastro">Cadastrar notícia</button>
         </form>
       </div>

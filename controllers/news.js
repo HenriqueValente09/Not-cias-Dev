@@ -16,15 +16,29 @@ exports.getIndex = (req, res, next) => {
 exports.postNewsBusca = (req, res, next) => {
   const busca_ = req.body.news_busca
   News.findAll().then(news_ => {
-    const filterNews = news_.filter( news => news.title.includes(busca_) || news.desc.includes(busca_))
+    filterNews = news_.filter( news => (news.title.includes(busca_)) || (news.desc.includes(busca_)))
+    console.log(filterNews);
     res.render('news/index', {
       resultBusca: busca_,
       news: filterNews,
       pageTitle: 'Dev News',
       path: '/'
     });
-    console.log('Busca: ',req.body.news_busca,'filtro: ',filterNews[0].title);
   }).catch(err => {
     console.log(err);
   })
+}
+
+exports.getNewsId = (req, res, next) => {
+  const newsId = req.params.newsId;
+  News.findByPk(newsId).then(news_ => {
+    res.render('news/news-detail', {
+      news_: news_,
+      pageTitle: news_.title,
+      path: '/news-detail'
+    })
+  }).catch(err => {
+    console.log(err);
+  })
+
 }

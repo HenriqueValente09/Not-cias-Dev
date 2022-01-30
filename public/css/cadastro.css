@@ -58,7 +58,8 @@ section .container {
 }
 
 .bloco-cadastro .btn-cadastro {
-  width: 150px;
+  width: 200px;
+  height: 80px;
   margin: auto;
   background-color: rgb(0, 255, 0);
   color: black;
@@ -66,4 +67,10 @@ section .container {
   font-weight: bold;
   padding: 10px;
   border-radius: 20px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.bloco-cadastro .btn-cadastro:hover {
+  width: 250px;
 }

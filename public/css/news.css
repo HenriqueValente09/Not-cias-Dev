@@ -17,7 +17,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: rgb(71, 71, 83)
+  background-color: rgb(71, 71, 83);
 }
 
 .news-header {
@@ -123,6 +123,7 @@ body {
 section {
   height: 100%;
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .news-table {
@@ -165,6 +166,7 @@ section {
 .news-table .news h2 {
   font-size: 30px;
   font-weight: bold;
+  text-align: start;
 }
 
 .news-table .news p {
@@ -181,7 +183,7 @@ section {
 
 .news-table .news .news-img {
   border-radius: 15px;
-  height: 260px;
+  height: 200px;
   width: 100%;
   transition: .5s;
 }
@@ -219,4 +221,46 @@ section {
 
 .news-table .news:hover .btn-news {
   transform: translateY(0px);
+}
+
+.news-row {
+  background-color: white;
+  width: 95%;
+  display: flex;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  top: 80px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-row h2 {
+  font-size: 50px;
+  margin: 10px auto;
+  font-weight: bolder;
+}
+
+.news-row .news-img{
+  margin-top: 70px;
+  max-width: 90%;
+}
+
+.news-row .news-img img {
+  max-height: 500px;
+  width: 100%;
+}
+
+.news-row p {
+  text-align: justify;
+  font-size: 20px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.hr-details {
+  width: 90%;
+  background-color: black;
+  height: 1px;
+  margin-top: 30px;
 }

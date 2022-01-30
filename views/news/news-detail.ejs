@@ -1,0 +1,18 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+  <%- include('../includes/navigation.ejs') %>
+
+  <section>
+    <div class="news-row">
+      <h2><%= news_.title %></h2>
+      <hr class="hr-details">
+      <div class="news-img">
+        <img src="<%= news_.imageUrl %>" alt="<%= news_.title %>">
+      </div>
+      <p><%= news_.desc %></p>
+    </div>
+    </div>
+  </section>
+</body>

@@ -18,7 +18,7 @@ const News__ = sequelize.define('news', {
     allowNull: false
   },
   desc: {
-    type: Sequelize.STRING,
+    type: Sequelize.STRING(2000),
     allowNull: false
   }
 })
