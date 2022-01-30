@@ -101,7 +101,7 @@ body {
   padding: 10px 10px;
   border-radius: 25px 0 0 25px;
   width: 100px;
-  transition: 0.5s cubic-bezier(0.5, -0.3, 1, 0.5);
+  transition: 0.5s ease;
   background-color: black;
   border: 2px solid rgb(0, 255, 0);
   color: white;
@@ -112,6 +112,16 @@ body {
 }
 
 .news-busca-btn {
+  margin: 0;
+  background-color: rgb(0, 255, 0);
+  width: 50px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  color: black;
+}
+
+.busca-btn {
+  display: none;
   margin: 0;
   background-color: rgb(0, 255, 0);
   width: 50px;
@@ -263,4 +273,105 @@ section {
   background-color: black;
   height: 1px;
   margin-top: 30px;
+}
+
+.btn-edit {
+  width: 35%;
+  height: 50px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  transform: translateY(65px);
+  background-color: rgb(0, 175, 0);
+  border-radius: 7px 7px 0 0;
+  cursor: pointer;
+  transition: .2s;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 25px;
+}
+
+.btn-delete {
+  width: 35%;
+  height: 50px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  transform: translateY(65px);
+  background-color: rgb(150, 0, 0);
+  border-radius: 7px 7px 0 0;
+  cursor: pointer;
+  transition: .2s ;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 25px;
+}
+
+.news-table .news:hover .btn-edit, .news-table .news:hover .btn-delete {
+  transform: translateY(0px);
+}
+
+@media (max-width: 900px) {
+  .news-nav ul {
+    display: none;
+  }
+
+  .news-header .news-nav {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .logo {
+    position: relative;
+    left: 0;
+  }
+
+  .logo:hover {
+    transform: translateX(0px);
+  }
+
+  .news-nav .container {
+    height: 100%;
+    align-items: center;
+  }
+
+  .news-busca-btn {
+    display: none;
+  }
+
+  .busca-btn {
+    position: absolute;
+    right: 20px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    z-index: 5;
+    padding: 16px;
+    top: 15px;
+  }
+
+  .news-busca {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    z-index: 4;
+  }
+
+  .busca-open {
+    width: 380px;
+  }
+
+  .news-busca:focus {
+    width: 380px;
+  }
 }

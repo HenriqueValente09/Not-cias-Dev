@@ -17,6 +17,7 @@
             <img src="<%= news_.imageUrl %>" alt="<%= news_.title %>">
           </div>
           <p><%= news_.desc %></p>
+          <a class="btn-news" href="/news-detail/<%= news_.id %>">ler mais</a>
         </div>
         <% } %>
         <% } else if (resultBusca_ == null) { %>
@@ -31,10 +32,11 @@
         </div>
         <% } %>
         <% } %>
-        <% } %> 
+        <% } %>
       </div>
     </div>
     </div>
   </section>
   <script src="/js/news.js"></script>
+  <script src="/js/news-busca.js"></script>
 </body>

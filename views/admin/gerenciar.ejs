@@ -1,0 +1,72 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+  <header class="news-header">
+    <nav class="news-nav">
+      <div class="logo">
+        <h1><a href="/">Dev News</a></h1>
+      </div>
+      <div class="container">
+        <ul class="news-lista">
+          <li><a href="/admin/cadastrar">cadastrar</a></li>
+          <li><a href="/admin/gerenciar">gerenciar</a></li>
+        </ul>
+        <form action="/admin/news-busca-admin" method="post" class="news-form">
+          <input type="text" placeholder=" busca..." class="news-busca" name="news_busca" id="news_busca">
+          <button class="news-busca-btn"><i class="fas fa-search"></i></button>
+          <div class="busca-btn"><i class="fas fa-search"></i></div>
+        </form>
+      </div>
+
+    </nav>
+  </header>
+
+  <section>
+    <div class="news-table">
+      <div class="news-table-content">
+        <% if (news.length > 0) { %>
+        <% const resultBusca_ = resultBusca %>
+        <% if (resultBusca_ !== null) { %>
+        <% for (let news_ of news) { %>
+        <div class="news">
+          <h2><%= news_.title %></h2>
+          <div class="news-img">
+            <img src="<%= news_.imageUrl %>" alt="<%= news_.title %>">
+          </div>
+          <p><%= news_.desc %></p>
+          <form action="/admin/edit-news" method="post">
+            <button class="btn-edit">Editar</button>
+          </form>
+          <form action="/admin/delete-news" method="post">
+            <button class="btn-delete">Deletar</button>
+          </form>
+        </div>
+        <% } %>
+        <% } else if (resultBusca_ == null) { %>
+        <% for (let news_ of news) { %>
+        <div class="news">
+          <h2><%= news_.title %></h2>
+          <div class="news-img">
+            <img src="<%= news_.imageUrl %>" alt="<%= news_.title %>">
+          </div>
+          <p><%= news_.desc %></p>
+          <form action="/admin/edit-news" method="post">
+            <input type="hidden" name="newsId" value="<%= news_.id %> ">
+            <button class="btn-edit">Editar</button>
+          </form>
+          <form action="/admin/delete-news" method="post">
+            <input type="hidden" name="newsId" value="<%= news_.id %> ">
+            <button class="btn-delete">Deletar</button>
+          </form>
+        </div>
+        <% } %>
+        <% } %>
+        <% } %>
+      </div>
+    </div>
+    </div>
+  </section>
+  <script src="/js/news.js"></script>
+  <script src="/js/news-busca.js"></script>
+</body>
