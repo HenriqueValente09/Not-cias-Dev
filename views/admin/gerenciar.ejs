@@ -51,10 +51,7 @@
             <img src="<%= news_.imageUrl %>" alt="<%= news_.title %>">
           </div>
           <p><%= news_.desc %></p>
-          <form action="/admin/edit-news" method="post">
-            <input type="hidden" name="newsId" value="<%= news_.id %> ">
-            <button class="btn-edit">Editar</button>
-          </form>
+          <a href="/admin/cadastrar/<%= news_.id %>?edit=true" class="btn-edit">Edit</a>
           <form action="/admin/delete-news" method="post">
             <input type="hidden" name="newsId" value="<%= news_.id %> ">
             <button class="btn-delete">Deletar</button>
