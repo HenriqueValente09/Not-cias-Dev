@@ -22,11 +22,11 @@ body {
 
 .news-header {
   position: fixed;
-  z-index: 2;
   height: 80px;
   width: 100%;
   background: rgba(0, 0, 0);
   color: white;
+  z-index: 3;
 }
 
 .news-nav .container {
@@ -39,17 +39,22 @@ body {
   justify-content: right;
 }
 
+.news-menu {
+  display: none;
+  z-index: 20;
+}
+
 .logo {
   position: absolute;
   left: 50px;
   z-index: 3;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .logo a {
   font-size: 40px;
   color: rgb(0, 255, 0);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .logo:hover {
@@ -164,7 +169,7 @@ section {
   overflow: hidden;
   cursor: default;
   color: black;
-  transition: .2s linear;
+  transition: 0.2s linear;
   font-family: Quicksand;
   font-weight: bold;
   border-radius: 7px;
@@ -182,11 +187,11 @@ section {
 .news-table .news p {
   transform: translateY(150px);
   opacity: 0;
-  transition: .3s cubic-bezier(1, 0, 0, 1);
+  transition: 0.3s cubic-bezier(1, 0, 0, 1);
   font-size: 20px;
 }
 
-.news-table .news:hover p{
+.news-table .news:hover p {
   transform: translateY(50px);
   opacity: 1;
 }
@@ -195,7 +200,7 @@ section {
   border-radius: 15px;
   height: 200px;
   width: 100%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .news-table .news img {
@@ -221,7 +226,7 @@ section {
   left: 10%;
   border-radius: 7px 7px 0 0;
   cursor: pointer;
-  transition: .2s ;
+  transition: 0.2s;
   color: white;
   font-weight: bolder;
   text-align: center;
@@ -251,7 +256,7 @@ section {
   font-weight: bolder;
 }
 
-.news-row .news-img{
+.news-row .news-img {
   margin-top: 70px;
   max-width: 90%;
 }
@@ -286,7 +291,7 @@ section {
   background-color: rgb(0, 175, 0);
   border-radius: 7px 7px 0 0;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
   color: white;
   font-weight: bolder;
   text-align: center;
@@ -304,14 +309,15 @@ section {
   background-color: rgb(150, 0, 0);
   border-radius: 7px 7px 0 0;
   cursor: pointer;
-  transition: .2s ;
+  transition: 0.2s;
   color: white;
   font-weight: bolder;
   text-align: center;
   font-size: 25px;
 }
 
-.news-table .news:hover .btn-edit, .news-table .news:hover .btn-delete {
+.news-table .news:hover .btn-edit,
+.news-table .news:hover .btn-delete {
   transform: translateY(0px);
 }
 
@@ -324,6 +330,80 @@ section {
     display: flex;
     align-content: center;
     justify-content: center;
+  }
+
+  .news-menu {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    padding: 0;
+    cursor: pointer;
+    align-content: space-between;
+    justify-content: space-between;
+    z-index: 12;
+  }
+
+  .news-menu span {
+    width: 100%;
+    background-color: rgb(0, 255, 0);
+    height: 3px;
+    border-radius: 10px;
+    margin: 0;
+    transition: .5s;
+  }
+
+  .change span:nth-child(1) {
+    transform: rotate(45deg) translateY(9px) translateX(10px);
+  }
+
+  .change span:nth-child(2) {
+    display: none;
+  }
+
+  .change span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px) translateX(10px);
+  }
+
+  .mobile-nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 9;
+    top: 80px;
+    transition: 0.5s;
+    left: 0px;
+    opacity: 1;
+    display: flex;
+    align-content: center;
+  }
+
+  .mobile-nav ul {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobile-nav ul li {
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 100px;
+  }
+
+  .mobile-nav ul li a{
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+  }
+
+  .mobile-nav-hide {
+    opacity: 0;
+    z-index: 0;
   }
 
   .logo {
@@ -368,10 +448,10 @@ section {
   }
 
   .busca-open {
-    width: 380px;
+    width: 320px;
   }
 
   .news-busca:focus {
-    width: 380px;
+    width: 320px;
   }
 }

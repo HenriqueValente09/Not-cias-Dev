@@ -1,5 +1,10 @@
 <header class="news-header">
   <nav class="news-nav">
+    <div class="news-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <div class="logo">
       <h1><a href="/">Dev News</a></h1>
     </div>
@@ -10,10 +15,16 @@
       </ul>
       <form action="/news-busca" method="post" class="news-form">
         <input type="text" placeholder=" busca..." class="news-busca" name="news_busca" id="news_busca">
-        <button  class="news-busca-btn"><i class="fas fa-search"></i></button>
+        <button class="news-busca-btn"><i class="fas fa-search"></i></button>
         <div class="busca-btn"><i class="fas fa-search"></i></div>
       </form>
     </div>
-
   </nav>
 </header>
+
+<nav class="mobile-nav mobile-nav-hide">
+  <ul class="news-lista-mobile">
+    <li><a href="/admin/cadastrar">cadastrar</a></li>
+    <li><a href="/admin/gerenciar">gerenciar</a></li>
+  </ul>
+</nav>

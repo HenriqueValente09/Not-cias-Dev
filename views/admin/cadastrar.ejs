@@ -14,10 +14,11 @@
           <input type="url" name="imageUrl" id="imageUrl" value="<% if (editing) { %><%= news_.imageUrl %><% } %>">
           <label for="">Texto</label>
           <textarea name="desc" id="desc" cols="30" rows="10" required><% if (editing) { %><%= news_.desc %><% } %></textarea>
-          <% if (editing) { %><input type="hidden" name="newsId" value="<%= news_.id %>"><% } %> 
+          <% if (editing) { %><input type="hidden" name="newsId" value="<%= news_.id %>"><% } %>
           <button class="btn-cadastro">Cadastrar notícia</button>
         </form>
       </div>
     </div>
-  </section> 
+  </section>
+  <script src="/js/news-busca.js"></script>
 </body>
