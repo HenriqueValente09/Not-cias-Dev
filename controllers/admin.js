@@ -41,7 +41,6 @@ exports.postAdminBusca = (req, res, next) => {
   const busca_ = req.body.news_busca
   News.findAll().then(news_ => {
     filterNews = news_.filter(news => (news.title.includes(busca_)) || (news.desc.includes(busca_)))
-    console.log(filterNews);
     res.render('admin/gerenciar', {
       resultBusca: busca_,
       news: filterNews,
